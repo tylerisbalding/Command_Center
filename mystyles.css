@@ -18,5 +18,8 @@ div {
     background-color: rgb(37, 37, 37);
     width: 1200px;;
     margin:auto;
+    justify-content: center;
+    color:beige;
+    padding: 20px;
 
 }
