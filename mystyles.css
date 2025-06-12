@@ -1,5 +1,8 @@
 body{
     background-color: rgb(27, 27, 27);
+    color:beige;
+    margin: 20px;
+    padding: 20px;
 }
 h1 {
     color:orange;
@@ -13,7 +16,7 @@ p {
 }
 div {
     background-color: rgb(37, 37, 37);
-    width:fit-content;
+    width: 1200px;;
     margin:auto;
 
 }
