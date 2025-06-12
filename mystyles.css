@@ -11,5 +11,9 @@ p {
     text-align: center;
     font-family: 'Trebuchet MS';
 }
-div {background-color: dimgrey;
+div {
+    background-color: dimgrey;
+    width:800px;
+    margin:auto;
+
 }
