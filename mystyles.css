@@ -3,9 +3,9 @@ body{
 }
 h1 {
     color:orange;
-    margin-left: 20px;
+    text-align: center;
 }
 p {
     color:rgb(255, 234, 195);
-    margin-left: 20px;
+    text-align: center;
 }
