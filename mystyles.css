@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(27, 27, 27);
+}
+h1 {
+    color:orange;
+    margin-left: 20px;
+}
+p {
+    color:rgb(255, 234, 195);
+    margin-left: 20px;
+}
