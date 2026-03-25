@@ -195,10 +195,34 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 
 
   <!-- Portfolio Section -->
-  <div class="w3-padding-64" id="projects">
-    <h2 class="w3-text-light-grey">My Projects</h2>
-    <hr style="width:200px" class="w3-opacity">
+  <div class="w3-content w3-display-container" style="max-width:800px">
 
+  <div class="mySlides w3-display-container">
+    <img src="Pictures/Cryptex.png" style="width:100%">
+    <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black">
+      Cryptex – Custom CAD-designed locking mechanism
+    </div>
+  </div>
+
+  <div class="mySlides w3-display-container">
+    <img src="Pictures/image.jpg" style="width:100%">
+    <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black">
+      Project 2 – Short description here
+    </div>
+  </div>
+
+  <div class="mySlides w3-display-container">
+    <img src="Pictures/image.jpg" style="width:100%">
+    <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black">
+      Project 3 – Short description here
+    </div>
+  </div>
+
+  <!-- Left/Right buttons -->
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">❮</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">❯</button>
+
+</div>
     <!-- Grid for photos -->
     <div class="w3-row-padding" style="margin:0 -16px">
       <div class="w3-half">
@@ -283,6 +307,28 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
         alert('There was an error sending your message.');
     });
 });
+<script>
+let slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  let i;
+  let x = document.getElementsByClassName("mySlides");
+  
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
 </script>
   <!-- End Contact Section -->
   </div>
