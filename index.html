@@ -141,20 +141,20 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 -->
     <div class="w3-row w3-center w3-padding-6 w3-section gradient-box">
       <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">78</span><br>
+        Projects Done
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">24</span><br>
+        Past Clients
+      </div>
+      <div class="w3-quarter w3-section">
         <span class="w3-xlarge">6+</span><br>
         Years Experience
       </div>
       <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">75+</span><br>
-        Projects Done
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">24+</span><br>
-        Happy Clients
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">#+</span><br>
-        Filler
+        <span class="w3-xlarge">as of</span><br>
+        March 2026
       </div>
     </div>
 
@@ -331,6 +331,14 @@ function showDivs(n) {
   x[slideIndex-1].style.display = "block";  
 }
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const yearSpan = document.getElementById('currentYear');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
+    });
+</script>
   <!-- End Contact Section -->
   </div>
   
@@ -341,6 +349,9 @@ function showDivs(n) {
     <i class="fa fa-github-square w3-hover-opacity"></i>  -->
   <!-- End footer -->
   </footer>
+<footer>
+    <p>© <span id="currentYear"></span> Your Company Name</p>
+</footer>
       
   </div>
 <!-- END PAGE CONTENT -->
