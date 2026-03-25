@@ -230,28 +230,39 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </div><br>
     <p>Let's get in touch. Send me a message:</p>
 
-    <form action="/action_page.php" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="Name"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Email" required name="Email"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="Subject"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Message" required name="Message"></p>
-      <p>
-        <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-          <i class="fa fa-paper-plane"></i> SEND MESSAGE
-        </button>
-      </p>
-    </form>
-    <form action="https://docs.google.com/forms/d/e/1FAIpQLSf4ASrco0qIyr-zx6RWW6DlDNqI9_gSAOJeiw_PFO_Mq3zxUg/formResponse" method="POST" target="_blank">
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="entry.438655886"></p>
-      <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="entry.991646426"></p>
-      <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="entry.1402072276"></p>
-      <p><textarea class="w3-input w3-padding-16" placeholder="Message" required name="entry.1769724624"></textarea></p>
-      <p>
-          <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-            <i class="fa fa-paper-plane"></i> SEND MESSAGE
-          </button>
-      </p>
-    </form>
+<form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSf4ASrco0qIyr-zx6RWW6DlDNqI9_gSAOJeiw_PFO_Mq3zxUg/formResponse" method="POST">
+    <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="entry.438655886"></p>
+    <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="entry.991646426"></p>
+    <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="entry.1402072276"></p>
+    <p><textarea class="w3-input w3-padding-16" placeholder="Message" required name="entry.1769724624"></textarea></p>
+    <p>
+      <button class="w3-button w3-light-grey w3-padding-large" type="submit">
+        <i class="fa fa-paper-plane"></i> SEND MESSAGE
+      </button>
+    </p>
+</form>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    var formData = new FormData(this);
+    
+    fetch(this.action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+    })
+    .then(() => {
+        alert('Message sent successfully!');
+        document.getElementById('contactForm').reset();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error sending your message.');
+    });
+});
+</script>
   <!-- End Contact Section -->
   </div>
   
