@@ -121,7 +121,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <div class="w3-padding-64">
   <h2 class="w3-text-light-grey">My Projects</h2>
   <hr style="width:200px" class="w3-opacity">
-  <div class="w3-content w3-display-container" style="max-width:1600px; height:1000px;">
+  <div class="w3-content w3-display-container" style="max-width:1600px; height:600px;">
 
     <div class="mySlides w3-display-container">
       <img src="Pictures/Cryptex.png" style="width:100%">
@@ -155,29 +155,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     </a>
 </div>
 </div>
-      <!-- Scripts -->
-<!-- Form Script -->
-      <script>
-      document.getElementById('contactForm').addEventListener('submit', function(e) {
-          e.preventDefault();
-          
-          var formData = new FormData(this);
-          
-          fetch(this.action, {
-              method: 'POST',
-              body: formData,
-              mode: 'no-cors'
-          })
-          .then(() => {
-              alert('Message sent successfully!');
-              document.getElementById('contactForm').reset();
-          })
-          .catch(error => {
-              console.error('Error:', error);
-              alert('There was an error sending your message.');
-          });
-      });
-      </script>
+<!-- Scripts -->
       <!-- Slide Script -->
       <script>
       let slideIndex = 1;
