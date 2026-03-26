@@ -59,20 +59,32 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
      onmouseout="this.src='Pictures/Headshot.png'; this.style.marginLeft='10px'" 
      style="width:90%; filter: grayscale(100%) brightness(1.4); margin-left:10px; display:block;">
   <br>
+      
   <a href="https://bhackl.com/#home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
-  <a href="https://bhackl.com/#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT</p>
-    <a href="resume.html">Resume</a>
+      
+<div onclick="window.location.href='https://bhackl.com/#about';" 
+     class="w3-bar-item w3-button w3-padding-large w3-hover-black" 
+     style="cursor: pointer;">
+  
+  <i class="fa fa-user w3-xxlarge"></i>
+  <p>ABOUT</p>
+  
+  <a href="resume.html" 
+     onclick="event.stopPropagation();" 
+     style="display: block; font-size: 12px; text-decoration: underline; color: inherit;">
+     Resume
   </a>
+      
+</div>
   <a href="https://bhackl.com/#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-eye w3-xxlarge"></i>
     <p>PROJECTS</p>
     <a href="projects.html">See More</a>
   </a>
+      
   <a href="https://bhackl.com/#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
@@ -95,23 +107,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <h1 class="w3-jumbo w3-text-white" style="font-family: 'Artifika', sans-serif; font-size: 92px;">
         Past Projects
     </h1>
-<!--
-    <p style="font-size: 24px;">Mechanical Engineer.</p>
-    <img src="Pictures/work_station.jpg" alt="Workstation" class="w3-image" height="1108">
--->
   </header>
-      
-  <!-- About -->
-  <div class="w3-justify w3-text-grey w3-padding-64">
-    <h2 class="w3-text-light-grey">History</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p class="w3-justify w3-text-white">History of my designing
-    </p>
-<!--
-
--->
-  </div>
-
 <!-- Projects -->
 <div class="w3-padding-64">
   <h2 class="w3-text-light-grey">My Projects</h2>
@@ -142,42 +138,14 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">❮</button>
     <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">❯</button>
   </div>
+    <a href="resume.html">View My Resume</a>
     <a href="BHackl_Resume.pdf" download>
       <button class="w3-button w3-light-grey w3-padding-large w3-section">
         <i class="fa fa-download"></i> Download Resume
       </button>
     </a>
 </div>
-      
-<!-- Contact -->
-<!--
-  <div class="w3-padding-64 w3-text-grey">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <div class="w3-left-align">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Charlotte, US</p>
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +1 (336) 682-7043</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: me@bhackl.com</p>
-      <br>
-      <p>Let's get in touch. Send me a message:</p>
-      
-      <form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSf4ASrco0qIyr-zx6RWW6DlDNqI9_gSAOJeiw_PFO_Mq3zxUg/formResponse" method="POST">
-        <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="entry.438655886"></p>
-        <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="entry.991646426"></p>
-        <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="entry.1402072276"></p>
-        <p><textarea class="w3-input w3-padding-16" placeholder="Message" required name="entry.1769724624"></textarea></p>
-        <p>
-          <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-            <i class="fa fa-paper-plane"></i> SEND MESSAGE
-          </button>
-        </p>
-      </form>
-    </div>
-  </div>
--->
-<!-- END PAGE CONTENT -->
-
+</div>
       <!-- Scripts -->
 <!-- Form Script -->
       <script>
