@@ -81,20 +81,41 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
      onmouseout="this.src='Pictures/Headshot.png'; this.style.marginLeft='10px'" 
      style="width:90%; filter: grayscale(100%) brightness(1.4); margin-left:10px; display:block;">
   <br>
+      
   <a href="https://bhackl.com/#home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
-  <a href="https://bhackl.com/#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT</p>
-    <a href="resume.html">Resume</a>
+      
+<div onclick="window.location.href='https://bhackl.com/#about';" 
+     class="w3-bar-item w3-button w3-padding-large w3-hover-black" 
+     style="cursor: pointer;">
+  
+  <i class="fa fa-user w3-xxlarge"></i>
+  <p>ABOUT</p>
+  
+  <a href="resume.html" 
+     onclick="event.stopPropagation();" 
+     style="display: block; font-size: 12px; text-decoration: underline; color: inherit;">
+     Resume
   </a>
-  <a href="https://bhackl.com/#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>PROJECTS</p>
-    <a href="projects.html">See More</a>
+</div>
+      
+<div onclick="window.location.href='https://bhackl.com/#projects';" 
+     class="w3-bar-item w3-button w3-padding-large w3-hover-black" 
+     style="cursor: pointer;">
+  
+  <i class="fa fa-eye w3-xxlarge"></i>
+  <p>PROJECTS</p>
+  
+  <a href="projects.html" 
+     onclick="event.stopPropagation();" 
+     style="display: block; font-size: 12px; text-decoration: underline; color: inherit;">
+     View More
   </a>
+      
+</div>
+      
   <a href="https://bhackl.com/#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
