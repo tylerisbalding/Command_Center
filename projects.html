@@ -54,7 +54,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <br>
-  <img src="Pictures/Headshot.png" onmouseover="this.src='Pictures/iseeyou.png'; this.style.marginLeft='20px'" onmouseout="this.src='Pictures/Headshot.png'; this.style.marginLeft='10px'" style="width:90%; filter: grayscale(100%) brightness(1.4); margin-left:auto; margin-right:auto; display:block;">
+  <img src="Pictures/Headshot.png; this.style.marginLeft='10px'" onmouseover="this.src='Pictures/iseeyou.png'; this.style.marginLeft='20px'" onmouseout="this.src='Pictures/Headshot.png'; this.style.marginLeft='10px'" style="width:90%; filter: grayscale(100%) brightness(1.4); margin-left:auto; margin-right:auto; display:block;">
   <br>
   <a href="https://bhackl.com/#home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
@@ -145,6 +145,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </div>
       
 <!-- Contact -->
+<!--
   <div class="w3-padding-64 w3-text-grey">
     <h2 class="w3-text-light-grey">Contact Me</h2>
     <hr style="width:200px" class="w3-opacity">
@@ -169,10 +170,12 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
       </form>
     </div>
   </div>
+-->
 <!-- END PAGE CONTENT -->
 </body>
 </html>
 <!-- Scripts -->
+<!-- Form Script -->
 <script>
 document.getElementById('contactForm').addEventListener('submit', function(e) {
     e.preventDefault();
@@ -194,6 +197,7 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     });
 });
 </script>
+<!-- Slide Script -->
 <script>
 let slideIndex = 1;
 showDivs(slideIndex);
@@ -215,13 +219,4 @@ function showDivs(n) {
   
   x[slideIndex-1].style.display = "block";  
 }
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const startYear = 2020;
-    const currentYear = new Date().getFullYear();
-    const years = currentYear - startYear;
-
-    document.getElementById('yearsExperience').textContent = years + "+";
-});
 </script>
