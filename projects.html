@@ -54,7 +54,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <br>
-  <img src="Pictures/Headshot.png; this.style.marginLeft='10px'" onmouseover="this.src='Pictures/iseeyou.png'; this.style.marginLeft='20px'" onmouseout="this.src='Pictures/Headshot.png'; this.style.marginLeft='10px'" style="width:90%; filter: grayscale(100%) brightness(1.4); margin-left:auto; margin-right:auto; display:block;">
+  <img src="Pictures/Headshot.png" onmouseover="this.src='Pictures/iseeyou.png'; this.style.marginLeft='20px'" onmouseout="this.src='Pictures/Headshot.png'; this.style.marginLeft='10px'" style="width:90%; filter: grayscale(100%) brightness(1.4); margin-left:auto; margin-right:auto; display:block;">
   <br>
   <a href="https://bhackl.com/#home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
@@ -104,11 +104,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <p class="w3-justify w3-text-white">History of my designing
     </p>
 <!--
-      <a href="BHackl_Resume.pdf" download>
-        <button class="w3-button w3-light-grey w3-padding-large w3-section">
-          <i class="fa fa-download"></i> Download Resume
-        </button>
-      </a>
+
 -->
   </div>
 
@@ -142,6 +138,11 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
     <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">❮</button>
     <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">❯</button>
   </div>
+    <a href="BHackl_Resume.pdf" download>
+      <button class="w3-button w3-light-grey w3-padding-large w3-section">
+        <i class="fa fa-download"></i> Download Resume
+      </button>
+    </a>
 </div>
       
 <!-- Contact -->
@@ -172,51 +173,52 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </div>
 -->
 <!-- END PAGE CONTENT -->
+
+      <!-- Scripts -->
+<!-- Form Script -->
+      <script>
+      document.getElementById('contactForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          var formData = new FormData(this);
+          
+          fetch(this.action, {
+              method: 'POST',
+              body: formData,
+              mode: 'no-cors'
+          })
+          .then(() => {
+              alert('Message sent successfully!');
+              document.getElementById('contactForm').reset();
+          })
+          .catch(error => {
+              console.error('Error:', error);
+              alert('There was an error sending your message.');
+          });
+      });
+      </script>
+      <!-- Slide Script -->
+      <script>
+      let slideIndex = 1;
+      showDivs(slideIndex);
+      
+      function plusDivs(n) {
+        showDivs(slideIndex += n);
+      }
+      
+      function showDivs(n) {
+        let i;
+        let x = document.getElementsByClassName("mySlides");
+        
+        if (n > x.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = x.length}
+        
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";  
+        }
+        
+        x[slideIndex-1].style.display = "block";  
+      }
+      </script>
 </body>
 </html>
-<!-- Scripts -->
-<!-- Form Script -->
-<script>
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    var formData = new FormData(this);
-    
-    fetch(this.action, {
-        method: 'POST',
-        body: formData,
-        mode: 'no-cors'
-    })
-    .then(() => {
-        alert('Message sent successfully!');
-        document.getElementById('contactForm').reset();
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('There was an error sending your message.');
-    });
-});
-</script>
-<!-- Slide Script -->
-<script>
-let slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  let i;
-  let x = document.getElementsByClassName("mySlides");
-  
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  
-  x[slideIndex-1].style.display = "block";  
-}
-</script>
