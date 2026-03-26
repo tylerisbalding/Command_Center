@@ -56,38 +56,38 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   <br>
   <img src="Pictures/Headshot.png" onmouseover="this.src='Pictures/iseeyou.png'; this.style.marginLeft='20px'" onmouseout="this.src='Pictures/Headshot.png'; this.style.marginLeft='10px'" style="width:90%; filter: grayscale(100%) brightness(1.4); margin-left:auto; margin-right:auto; display:block;">
   <br>
-  <a href="index.html#home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="https://bhackl.com/#home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-home w3-xxlarge"></i>
     <p>HOME</p>
   </a>
-  <a href="index.html#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="https://bhackl.com/#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-user w3-xxlarge"></i>
     <p>ABOUT</p>
   </a>
-  <a href="index.html#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="https://bhackl.com/#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-eye w3-xxlarge"></i>
     <p>PROJECTS</p>
   </a>
-  <a href="index.html#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+  <a href="https://bhackl.com/#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
     <i class="fa fa-envelope w3-xxlarge"></i>
     <p>CONTACT</p>
   </a>
-  <a href="index.html">Link Text</a>
+  <a href="https://bhackl.com/">Link Text</a>
 </nav>
 
 <!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="index.html#home" class="w3-bar-item w3-button" style="width:25% !important">#HOME</a>
-    <a href="index.html#about" class="w3-bar-item w3-button" style="width:25% !important">#ABOUT</a>
-    <a href="index.html#projects" class="w3-bar-item w3-button" style="width:25% !important">#PROJECTS</a>
-    <a href="index.html#contact" class="w3-bar-item w3-button" style="width:25% !important">#CONTACT</a>
+    <a href="https://bhackl.com/#home" class="w3-bar-item w3-button" style="width:25% !important">#HOME</a>
+    <a href="https://bhackl.com/#about" class="w3-bar-item w3-button" style="width:25% !important">#ABOUT</a>
+    <a href="https://bhackl.com/#projects" class="w3-bar-item w3-button" style="width:25% !important">#PROJECTS</a>
+    <a href="https://bhackl.com/#contact" class="w3-bar-item w3-button" style="width:25% !important">#CONTACT</a>
   </div>
 </div>
 
 <!-- Header -->
 <div class="w3-padding-large" id="main">
-  <header class="w3-container w3-padding-32 w3-center" id="home">
+  <header class="w3-container w3-padding-32 w3-center">
     <h1 class="w3-jumbo w3-text-white" style="font-family: 'Artifika', sans-serif; font-size: 92px;">
         Past Projects
     </h1>
@@ -98,7 +98,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </header>
       
   <!-- About -->
-  <div class="w3-justify w3-text-grey w3-padding-64" id="about">
+  <div class="w3-justify w3-text-grey w3-padding-64">
     <h2 class="w3-text-light-grey">History</h2>
     <hr style="width:200px" class="w3-opacity">
     <p class="w3-justify w3-text-white">History of my designing
@@ -113,7 +113,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
   </div>
 
 <!-- Projects -->
-<div class="w3-padding-64" id="projects">
+<div class="w3-padding-64">
   <h2 class="w3-text-light-grey">My Projects</h2>
   <hr style="width:200px" class="w3-opacity">
   <div class="w3-content w3-display-container" style="max-width:1600px; height:1000px;">
@@ -145,7 +145,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </div>
       
 <!-- Contact -->
-  <div class="w3-padding-64 w3-text-grey" id="contact">
+  <div class="w3-padding-64 w3-text-grey">
     <h2 class="w3-text-light-grey">Contact Me</h2>
     <hr style="width:200px" class="w3-opacity">
 
@@ -173,56 +173,55 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </body>
 </html>
 <!-- Scripts -->
-            <script>
-            document.getElementById('contactForm').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                var formData = new FormData(this);
-                
-                fetch(this.action, {
-                    method: 'POST',
-                    body: formData,
-                    mode: 'no-cors'
-                })
-                .then(() => {
-                    alert('Message sent successfully!');
-                    document.getElementById('contactForm').reset();
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('There was an error sending your message.');
-                });
-            });
-            </script>
-            <script>
-            let slideIndex = 1;
-            showDivs(slideIndex);
-            
-            function plusDivs(n) {
-              showDivs(slideIndex += n);
-            }
-            
-            function showDivs(n) {
-              let i;
-              let x = document.getElementsByClassName("mySlides");
-              
-              if (n > x.length) {slideIndex = 1}
-              if (n < 1) {slideIndex = x.length}
-              
-              for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";  
-              }
-              
-              x[slideIndex-1].style.display = "block";  
-            }
-            </script>
-            <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const startYear = 2020;
-                const currentYear = new Date().getFullYear();
-                const years = currentYear - startYear;
-            
-                document.getElementById('yearsExperience').textContent = years + "+";
-            });
-            </script>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    var formData = new FormData(this);
+    
+    fetch(this.action, {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors'
+    })
+    .then(() => {
+        alert('Message sent successfully!');
+        document.getElementById('contactForm').reset();
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('There was an error sending your message.');
+    });
+});
+</script>
+<script>
+let slideIndex = 1;
+showDivs(slideIndex);
 
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  let i;
+  let x = document.getElementsByClassName("mySlides");
+  
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const startYear = 2020;
+    const currentYear = new Date().getFullYear();
+    const years = currentYear - startYear;
+
+    document.getElementById('yearsExperience').textContent = years + "+";
+});
+</script>
