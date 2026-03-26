@@ -1,27 +1,55 @@
-body{
-    background-color: rgb(25, 25, 25);
-    margin: 0px;
-    padding: 0px;
+/* Core Layout & Theme */
+body, h1, h2, h3, h4, h5, h6 {
+    font-family: "Montserrat", sans-serif;
 }
-h1 {
-    color:rgb(0, 0, 0);
-    text-align: center;
-    font-family: 'fantasy';
+
+body {
+    background-color: #616161; /* w3-dark-grey equivalent */
+    margin: 0;
+    padding: 0;
 }
-p {
-    color:rgb(255, 255, 255);
-    text-align: center;
-    font-family: 'Trebuchet MS';
+
+/* Sidebar Logic */
+.w3-sidebar {
+    width: 120px;
+    background-color: #464e63;
+    overflow-x: hidden;
 }
-div {
-    background-color: rgb(37, 37, 37);
-    width: 95%;;
-    margin:auto;
-    justify-content: left;
-    color:beige;
-    padding: 20px;
+
+#main {
+    margin-left: 120px;
 }
-img {
-    display:block;
-    margin:auto;
+
+@media only screen and (max-width: 600px) {
+    #main {
+        margin-left: 0;
+    }
+}
+
+/* Custom Components */
+.gradient-box {
+    background: radial-gradient(circle, #d3d3d3 80%, #e0e0e0 90%, #ffffff 100%);
+    border-radius: 12px;
+    color: #333; /* Darker text for readability on light gradient */
+}
+
+/* Slideshow */
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Transitions for the Avatar */
+.nav-avatar {
+    width: 90%;
+    filter: grayscale(100%) brightness(1.4);
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    transition: margin-left 0.3s ease;
 }
