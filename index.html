@@ -35,326 +35,157 @@
 -->
 <html>
 <head>
-<link rel="stylesheet" href="mystyles.css">
-<link rel="icon" type="image/x-icon" href="Pictures/icon.ico">
-<title>Ben Hackl's Portfolio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Artifika">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.gradient-box {
-  background: radial-gradient(circle, #d3d3d3 80%, #e0e0e0 90%, #ffffff 100%);
-  border-radius: 12px;
-}
-.mySlides {
-  display: none;
-}
+    <title>Ben Hackl's Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Artifika">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="mystyles.css">
+    <link rel="icon" type="image/x-icon" href="Pictures/icon.ico">
+</head>
 
-.mySlides img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
-.w3-row-padding img {margin-bottom: 12px}
-/* Set the width of the sidebar to 120px */
-.w3-sidebar {
-  width: 120px;
-  background-color: #464e63;
-  overflow-x: hidden;
-}
-/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
-#main {margin-left: 120px}
-/* Remove margins from "page content" on small screens */
-@media only screen and (max-width: 600px) {#main {margin-left: 0}}
-</style>
 <body class="w3-dark-grey">
 
-<!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
-  <!-- Avatar image in top left corner -->
-  <br>
-  <img src="Pictures/Headshot.png" onmouseover="this.src='Pictures/iseeyou.png'; this.style.marginLeft='20px'" onmouseout="this.src='Pictures/Headshot.png'; this.style.marginLeft='10px'" style="width:90%; filter: grayscale(100%) brightness(1.4); margin-left:auto; margin-right:auto; display:block;">
-  <br>
-  <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-home w3-xxlarge"></i>
-    <p>HOME</p>
-  </a>
-  <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-user w3-xxlarge"></i>
-    <p>ABOUT</p>
-  </a>
-  <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-eye w3-xxlarge"></i>
-    <p>PROJECTS</p>
-  </a>
-  <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
-    <i class="fa fa-envelope w3-xxlarge"></i>
-    <p>CONTACT</p>
-  </a>
-  <a href="portfolio.html">Link Text</a>
+    <br>
+    <img src="Pictures/Headshot.png" 
+         class="nav-avatar" 
+         onmouseover="this.src='Pictures/iseeyou.png'; this.style.marginLeft='20px'" 
+         onmouseout="this.src='Pictures/Headshot.png'; this.style.marginLeft='10px'">
+    <br>
+    <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-home w3-xxlarge"></i>
+        <p>HOME</p>
+    </a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-user w3-xxlarge"></i>
+        <p>ABOUT</p>
+    </a>
+    <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-eye w3-xxlarge"></i>
+        <p>PROJECTS</p>
+    </a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+        <i class="fa fa-envelope w3-xxlarge"></i>
+        <p>CONTACT</p>
+    </a>
 </nav>
 
-<!-- Navbar on small screens (Hidden on medium and large screens) -->
 <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
-  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
-    <a href="#home" class="w3-bar-item w3-button" style="width:25% !important">#HOME</a>
-    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">#ABOUT</a>
-    <a href="#projects" class="w3-bar-item w3-button" style="width:25% !important">#PROJECTS</a>
-    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">#CONTACT</a>
-  </div>
+    <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+        <a href="#home" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+        <a href="#projects" class="w3-bar-item w3-button" style="width:25% !important">PROJECTS</a>
+        <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+    </div>
 </div>
 
-<!-- Page Content -->
 <div class="w3-padding-large" id="main">
-  <!-- Header/Home -->
-  <header class="w3-container w3-padding-32 w3-center" id="home">
-    <h1 class="w3-jumbo w3-text-white" style="font-family: 'Artifika', sans-serif; font-size: 92px;">
-        I'm Ben Hackl.
-    </h1>
-    <p style="font-size: 24px;">Mechanical Engineer.</p>
-    <img src="Pictures/work_station.jpg" alt="Workstation" class="w3-image" height="1108">
-  </header>
+    <header class="w3-container w3-padding-32 w3-center" id="home">
+        <h1 class="w3-jumbo w3-text-white" style="font-family: 'Artifika', sans-serif;">I'm Ben Hackl.</h1>
+        <p style="font-size: 24px;">Mechanical Engineer.</p>
+        <img src="Pictures/work_station.jpg" alt="Workstation" class="w3-image" style="max-width:100%; height:auto;">
+    </header>
 
-  <!-- About Section -->
-  <div class="w3-justify w3-text-grey w3-padding-64" id="about">
-    <h2 class="w3-text-light-grey">About Me</h2>
-    <hr style="width:200px" class="w3-opacity">
-    <p>Hey there! I'm Ben Hackl, a 19-year-old human currently trying to make sense of the world while studying at UNCC. I specialize in Computer Aided Design and research, which basically means I drink a lot of Red Bull and pretend to know what I'm doing. When I’m not busy doing homework, you can usually find me at my robotics club while passionately arguing about how horrible CS majors are at CAD. I have an irrational love for rock collecting, and I believe that Jesse Welles is the next Bob Dylan. My current mission in life is to sleep, or at the very least, survive drinking 7 Red Bulls in order to beat my previous record. I’m always up for learning new things, taking on weird challenges, and maybe, just possibly, figuring out how to quit my caffeine addiction.
-    </p>
-<!--
-    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
-    <p class="w3-wide">Computer Aided Design</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:95%;margin:0"></div>
-    </div>
-    <p class="w3-wide">Prototyping</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:85%;margin:0"></div>
-    </div>
-    <p class="w3-wide">Filler</p>
-    <div class="w3-white">
-      <div class="w3-dark-grey" style="height:28px;width:80%;margin:0"></div>
-    </div><br>
--->
-    <div class="w3-row w3-center w3-padding-6 w3-section gradient-box">
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">78</span><br>
-        Projects Done
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">24</span><br>
-        Past Clients
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge" id="yearsExperience"></span><br>
-        Years Experience
-      </div>
-      <div class="w3-quarter w3-section">
-        <span class="w3-xlarge">as of</span><br>
-        March 2026
-      </div>
+    <div class="w3-justify w3-text-grey w3-padding-64" id="about">
+        <h2 class="w3-text-light-grey">About Me</h2>
+        <hr style="width:200px" class="w3-opacity">
+        <p>Hey there! I'm Ben Hackl, a 19-year-old human currently trying to make sense of the world while studying at UNCC...</p>
+
+        <div class="w3-row w3-center w3-padding-6 w3-section gradient-box">
+            <div class="w3-quarter w3-section">
+                <span class="w3-xlarge">78</span><br>Projects Done
+            </div>
+            <div class="w3-quarter w3-section">
+                <span class="w3-xlarge">24</span><br>Past Clients
+            </div>
+            <div class="w3-quarter w3-section">
+                <span class="w3-xlarge" id="yearsExperience"></span><br>Years Experience
+            </div>
+            <div class="w3-quarter w3-section">
+                <span class="w3-xlarge">as of</span><br>March 2026
+            </div>
+        </div>
+
+        <a href="BHackl_Resume.pdf" download>
+            <button class="w3-button w3-light-grey w3-padding-large w3-section">
+                <i class="fa fa-download"></i> Download Resume
+            </button>
+        </a>
     </div>
 
-      <a href="BHackl_Resume.pdf" download>
-        <button class="w3-button w3-light-grey w3-padding-large w3-section">
-          <i class="fa fa-download"></i> Download Resume
-        </button>
-      </a>
-  </div>
-    <!-- Grid for pricing tables -->
-<!--
-        <h3 class="w3-padding-16 w3-text-light-grey">My Price</h3>
-
-    <div class="w3-row-padding" style="margin:0 -16px">
-
-      <div class="w3-half w3-margin-bottom">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Basic</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">5GB Storage</li>
-          <li class="w3-padding-16">Mail Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 10</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-
-      <div class="w3-half">
-        <ul class="w3-ul w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-dark-grey w3-xlarge w3-padding-32">Pro</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">50GB Storage</li>
-          <li class="w3-padding-16">Endless Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-white w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-    </div>
--->
-    <!-- End Grid/Pricing tables -->
-<!-- Portfolio Section -->
-<div class="w3-padding-64" id="projects">
-
-  <h2 class="w3-text-light-grey">My Projects</h2>
-  <hr style="width:200px" class="w3-opacity">
-
-  <div class="w3-content w3-display-container" style="max-width:1600px; height:1000px;">
-
-    <div class="mySlides w3-display-container">
-      <img src="Pictures/Cryptex.png" style="width:100%">
-      <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black">
-        Cryptex with Floating Civil War Minie Ball
-      </div>
+    <div class="w3-padding-64" id="projects">
+        <h2 class="w3-text-light-grey">My Projects</h2>
+        <hr style="width:200px" class="w3-opacity">
+        <div class="w3-content w3-display-container" style="max-width:1600px;">
+            <div class="mySlides">
+                <img src="Pictures/Cryptex.png">
+                <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black">Cryptex with Floating Minie Ball</div>
+            </div>
+            <div class="mySlides">
+                <img src="Pictures/EDD_Final_Design.png">
+                <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black">Modular Collapsible Shelf</div>
+            </div>
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">❮</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">❯</button>
+        </div>
     </div>
 
-    <div class="mySlides w3-display-container">
-      <img src="Pictures/EDD_Final_Design.png" style="width:100%">
-      <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black" style="text-align:center">
-        High School PLTW Capstone Project: Modular Collapsible Shelf
-      </div>
+    <div class="w3-padding-64 w3-text-grey" id="contact">
+        <h2 class="w3-text-light-grey">Contact Me</h2>
+        <hr style="width:200px" class="w3-opacity">
+        <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Charlotte, US</p>
+        <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> +1 (336) 682-7043</p>
+        <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> me@bhackl.com</p>
+        
+        <form id="contactForm" action="https://docs.google.com/forms/d/e/YOUR_ID/formResponse" method="POST">
+            <input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="entry.438655886">
+            <input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="entry.991646426">
+            <input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="entry.1402072276">
+            <textarea class="w3-input w3-padding-16" placeholder="Message" required name="entry.1769724624"></textarea>
+            <button class="w3-button w3-light-grey w3-padding-large w3-section" type="submit">
+                <i class="fa fa-paper-plane"></i> SEND MESSAGE
+            </button>
+        </form>
     </div>
 
-    <div class="mySlides w3-display-container">
-      <img src="Pictures/image.jpg" style="width:100%">
-      <div class="w3-display-bottomleft w3-container w3-padding-16 w3-black" style="text-align:center">
-        Project 3 – Short description here
-      </div>
-    </div>
-
-    <!-- Buttons -->
-    <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">❮</button>
-    <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">❯</button>
-
-  </div>
-
+    <footer class="w3-padding-64 w3-text-grey w3-xlarge w3-center">
+        <p>Powered by caffeine and mechanical spite.</p>
+    </footer>
 </div>
-<!-- End Portfolio Section -->   
-    <!-- Testimonials -->
-  <div class="w3-padding-64" id="Testimonial">
-    <h2 class="w3-text-light-grey">Client Testimonials</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <div class="w3-row-padding" style="margin:0 -16px"> 
-      <img src="Pictures/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-      <p><span class="w3-large w3-margin-right" style="text-align:left">Barry Cochran.</span> Owner of LF Deardorff and Sons. LLC.</p>
-      <p>Quote here.</p>
-          
-      <br style="clear: both;">
-
-      <img src="Pictures/Tyler_Eisenbraun.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
-      <p><span class="w3-large w3-margin-right" style="text-align:left">Tyler Eisenbraun</span> President of Gold Rush Robotics</p>
-      <p>Quote here.</p>
-    </div>
-  </div>
-
-  <!-- End About Section -->
-  <div class="w3-padding-64 w3-text-grey" id="contact">
-    <h2 class="w3-text-light-grey">Contact Me</h2>
-    <hr style="width:200px" class="w3-opacity">
-
-    <div class="w3-left-align">
-      <p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Charlotte, US</p>
-      <p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> Phone: +1 (336) 682-7043</p>
-      <p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> Email: me@bhackl.com</p>
-
-
-  <!-- Contact Section -->
-      <br>
-    <p>Let's get in touch. Send me a message:</p>
-
-  <form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSf4ASrco0qIyr-zx6RWW6DlDNqI9_gSAOJeiw_PFO_Mq3zxUg/formResponse" method="POST">
-    <p><input class="w3-input w3-padding-16" type="text" placeholder="Name" required name="entry.438655886"></p>
-    <p><input class="w3-input w3-padding-16" type="email" placeholder="Email" required name="entry.991646426"></p>
-    <p><input class="w3-input w3-padding-16" type="text" placeholder="Subject" required name="entry.1402072276"></p>
-    <p><textarea class="w3-input w3-padding-16" placeholder="Message" required name="entry.1769724624"></textarea></p>
-    <p>
-      <button class="w3-button w3-light-grey w3-padding-large" type="submit">
-        <i class="fa fa-paper-plane"></i> SEND MESSAGE
-      </button>
-    </p>
-  </form>
 
 <script>
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    var formData = new FormData(this);
-    
-    fetch(this.action, {
-        method: 'POST',
-        body: formData,
-        mode: 'no-cors'
-    })
-    .then(() => {
-        alert('Message sent successfully!');
-        document.getElementById('contactForm').reset();
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('There was an error sending your message.');
-    });
-});
-</script>
-<script>
+// Slideshow Script
 let slideIndex = 1;
 showDivs(slideIndex);
-
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
+function plusDivs(n) { showDivs(slideIndex += n); }
 function showDivs(n) {
-  let i;
-  let x = document.getElementsByClassName("mySlides");
-  
-  if (n > x.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = x.length}
-  
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  
-  x[slideIndex-1].style.display = "block";  
+    let x = document.getElementsByClassName("mySlides");
+    if (n > x.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = x.length}
+    for (let i = 0; i < x.length; i++) { x[i].style.display = "none"; }
+    x[slideIndex-1].style.display = "block";  
 }
-</script>
-<script>
+
+// Experience Counter
 document.addEventListener('DOMContentLoaded', function() {
     const startYear = 2020;
     const currentYear = new Date().getFullYear();
-    const years = currentYear - startYear;
+    document.getElementById('yearsExperience').textContent = (currentYear - startYear) + "+";
+});
 
-    document.getElementById('yearsExperience').textContent = years + "+";
+// Form Handling
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    fetch(this.action, { method: 'POST', body: new FormData(this), mode: 'no-cors' })
+    .then(() => { alert('Message sent!'); this.reset(); })
+    .catch(() => alert('Error sending message.'));
 });
 </script>
-  <!-- End Contact Section -->
-  </div>
-  
-    <!-- Footer -->
-  <footer class="w3-padding-64 w3-text-grey w3-xlarge">
- <!--   <i class="fa fa-linkedin w3-hover-opacity"></i>
-    <i class="fa fa-slack w3-hover-opacity"></i> 
-    <i class="fa fa-github-square w3-hover-opacity"></i>  -->
-  <!-- End footer -->
-  </footer>
-      
-  </div>
-<!-- END PAGE CONTENT -->
-
 
 </body>
 </html>
