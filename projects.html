@@ -217,28 +217,81 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 </div>
 </div>
 <!-- Scripts -->
+            <script>
+            let slideIndex = 1;
+            let slideInterval = 15000; // Normal cycling (5 seconds)
+            let pauseDuration = 45000; // Stay still for 15 seconds after a click
+            let autoSlide;
+            let pauseTimeout; // Variable to hold the delay timer
+            
+            showDivs(slideIndex);
+            startAutoSlide();
+            
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+              
+              // 1. Stop the current auto-cycling
+              clearInterval(autoSlide);
+              
+              // 2. Clear any existing "wait" timers so they don't stack
+              clearTimeout(pauseTimeout);
+              
+              // 3. Set a timeout to restart the auto-cycling after the pause duration
+              pauseTimeout = setTimeout(function() {
+                startAutoSlide();
+              }, pauseDuration);
+            }
+            
+            function showDivs(n) {
+              let i;
+              let x = document.getElementsByClassName("mySlides");
+              
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              
+              x[slideIndex-1].style.display = "block";  
+            }
+            
+            function startAutoSlide() {
+              // Ensure we don't have multiple intervals running
+              clearInterval(autoSlide); 
+              autoSlide = setInterval(function() {
+                // Only move if we aren't currently in a "manual pause" state
+                plusDivs_Auto(1); 
+              }, slideInterval);
+            }
+            
+            // Separate function for automatic movement so it doesn't trigger the pause
+            function plusDivs_Auto(n) {
+              showDivs(slideIndex += n);
+            }
+            </script>
       <!-- Slide Script -->
-      <script>
-      let slideIndex = 1;
-      showDivs(slideIndex);
-      
-      function plusDivs(n) {
-        showDivs(slideIndex += n);
-      }
-      
-      function showDivs(n) {
-        let i;
-        let x = document.getElementsByClassName("mySlides");
-        
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length}
-        
-        for (i = 0; i < x.length; i++) {
-          x[i].style.display = "none";  
-        }
-        
-        x[slideIndex-1].style.display = "block";  
-      }
-      </script>
+            <script>
+            let slideIndex = 1;
+            showDivs(slideIndex);
+            
+            function plusDivs(n) {
+              showDivs(slideIndex += n);
+            }
+            
+            function showDivs(n) {
+              let i;
+              let x = document.getElementsByClassName("mySlides");
+              
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              
+              x[slideIndex-1].style.display = "block";  
+            }
+            </script>
 </body>
 </html>
