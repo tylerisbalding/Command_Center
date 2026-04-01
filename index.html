@@ -324,6 +324,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif"}
 </div>
       
 <!-- Scripts -->
+      <!-- form script-->
             <script>
             document.getElementById('contactForm').addEventListener('submit', function(e) {
                 e.preventDefault();
@@ -345,12 +346,18 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif"}
                 });
             });
             </script>
+      <!--slide script-->
             <script>
             let slideIndex = 1;
+            let slideInterval = 6000;
+            let autoSlide;
+            
             showDivs(slideIndex);
+            startAutoSlide(); // Start the timer when the page loads
             
             function plusDivs(n) {
               showDivs(slideIndex += n);
+              resetAutoSlide(); // Reset timer on manual click
             }
             
             function showDivs(n) {
@@ -366,7 +373,21 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif"}
               
               x[slideIndex-1].style.display = "block";  
             }
+            
+            // Function to start the automatic cycling
+            function startAutoSlide() {
+              autoSlide = setInterval(function() {
+                plusDivs(1);
+              }, slideInterval);
+            }
+            
+            // Function to reset the timer
+            function resetAutoSlide() {
+              clearInterval(autoSlide);
+              startAutoSlide();
+            }
             </script>
+      <!--year script-->
             <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const startYear = 2020;
@@ -376,6 +397,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif"}
                 document.getElementById('yearsExperience').textContent = years + "+";
             });
             </script>
+      <!--age script-->
             <script>
             document.addEventListener('DOMContentLoaded', function() {
                 const currentYear = new Date().getFullYear();
