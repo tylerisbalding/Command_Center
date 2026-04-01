@@ -238,7 +238,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif"}
   <hr style="width:400px" class="w3-opacity">
       <div class="w3-padding-32">
         <div class="w3-content w3-display-container" style="max-width:1600px; min-height:700px;">
-          <div class="slides-wrapper" id="slideTrack">
                 
           <div class="mySlides">
                <img src="Pictures/project_shelf.png" style="width:100%; display:block;">
@@ -288,7 +287,6 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif"}
               Project 7 – Freelance Work
             </div>
           </div>
-        </div>
         <button class="w3-round-large w3-button w3-black w3-display-left" onclick="plusDivs(-1)">❮</button>
         <button class="w3-round-large w3-button w3-black w3-display-right" onclick="plusDivs(1)">❯</button>
       </div>
@@ -366,48 +364,44 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif"}
             </script>
       <!--slide script-->
             <script>
-            let slideIndex = 0; // Starting at 0 for easier math
-            const slides = document.getElementsByClassName("mySlides");
-            const track = document.getElementById("slideTrack");
-            const totalSlides = slides.length;
-            let slideInterval = 5000;
+            let slideIndex = 1;
+            let slideInterval = 5000; // Time in milliseconds (5 seconds)
             let autoSlide;
             
-            // Start the sequence
             showDivs(slideIndex);
-            startAutoSlide();
+            startAutoSlide(); // Start the timer when the page loads
             
             function plusDivs(n) {
-              slideIndex += n;
-              
-              // Loop back logic
-              if (slideIndex >= totalSlides) { slideIndex = 0; }
-              if (slideIndex < 0) { slideIndex = totalSlides - 1; }
-              
-              showDivs(slideIndex);
-              resetAutoSlide();
+              showDivs(slideIndex += n);
+              resetAutoSlide(); // Reset timer on manual click
             }
             
             function showDivs(n) {
-              // Move the track by 100% multiplied by the current index
-              const percentage = n * -80;
-              track.style.transform = `translateX(${percentage}%)`;
+              let i;
+              let x = document.getElementsByClassName("mySlides");
+              
+              if (n > x.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = x.length}
+              
+              for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";  
+              }
+              
+              x[slideIndex-1].style.display = "block";  
             }
             
+            // Function to start the automatic cycling
             function startAutoSlide() {
               autoSlide = setInterval(function() {
                 plusDivs(1);
               }, slideInterval);
             }
             
+            // Function to reset the timer
             function resetAutoSlide() {
               clearInterval(autoSlide);
               startAutoSlide();
             }
-            
-            // Optional: Pause on hover logic
-            track.parentElement.addEventListener('mouseenter', () => clearInterval(autoSlide));
-            track.parentElement.addEventListener('mouseleave', () => startAutoSlide());
             </script>
       <!--year script-->
             <script>
