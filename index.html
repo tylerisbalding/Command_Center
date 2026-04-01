@@ -45,6 +45,18 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Artifika">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+.headshot-hover {
+  width: 90%;
+  filter: grayscale(100%) brightness(1.4);
+  margin-left: 10px;
+  display: block;
+  transition: all 0.3s ease; /* This makes the margin change smooth, not jumpy */
+}
+
+.headshot-hover:hover {
+  content: url('Pictures/iseeyou.png');
+  margin-left: 20px; /* Moves smoothly because of the transition above */
+}
 .w3-sidebar a {
   font-family: "Montserrat", sans-serif !important;
   text-transform: none; /* Prevents unwanted caps */
@@ -100,10 +112,7 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif"}
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
 <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
   <br>
-  <img src="Pictures/Headshot.png" 
-     onmouseover="this.src='Pictures/iseeyou.png'; this.style.marginLeft='20px'" 
-     onmouseout="this.src='Pictures/Headshot.png'; this.style.marginLeft='10px'" 
-     style="width:90%; filter: grayscale(100%) brightness(1.4); margin-left:10px; display:block;">
+  <img src="Pictures/Headshot.png" class="headshot-hover">
   <br>
       
   <a href="https://bhackl.com/#home" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
