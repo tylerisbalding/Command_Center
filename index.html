@@ -348,15 +348,27 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif"}
       <!--slide script-->
             <script>
             let slideIndex = 1;
-            let slideInterval = 5000; // Time in milliseconds (5 seconds)
+            let slideInterval = 5000; // Normal cycling (5 seconds)
+            let pauseDuration = 15000; // Stay still for 15 seconds after a click
             let autoSlide;
+            let pauseTimeout; // Variable to hold the delay timer
             
             showDivs(slideIndex);
-            startAutoSlide(); // Start the timer when the page loads
+            startAutoSlide();
             
             function plusDivs(n) {
               showDivs(slideIndex += n);
-              resetAutoSlide(); // Reset timer on manual click
+              
+              // 1. Stop the current auto-cycling
+              clearInterval(autoSlide);
+              
+              // 2. Clear any existing "wait" timers so they don't stack
+              clearTimeout(pauseTimeout);
+              
+              // 3. Set a timeout to restart the auto-cycling after the pause duration
+              pauseTimeout = setTimeout(function() {
+                startAutoSlide();
+              }, pauseDuration);
             }
             
             function showDivs(n) {
@@ -373,17 +385,18 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif"}
               x[slideIndex-1].style.display = "block";  
             }
             
-            // Function to start the automatic cycling
             function startAutoSlide() {
+              // Ensure we don't have multiple intervals running
+              clearInterval(autoSlide); 
               autoSlide = setInterval(function() {
-                plusDivs(1);
+                // Only move if we aren't currently in a "manual pause" state
+                plusDivs_Auto(1); 
               }, slideInterval);
             }
             
-            // Function to reset the timer
-            function resetAutoSlide() {
-              clearInterval(autoSlide);
-              startAutoSlide();
+            // Separate function for automatic movement so it doesn't trigger the pause
+            function plusDivs_Auto(n) {
+              showDivs(slideIndex += n);
             }
             </script>
       <!--year script-->
